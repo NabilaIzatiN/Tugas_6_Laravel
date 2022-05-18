@@ -10,7 +10,7 @@
       <a href="/groups/{{$group['id']}}" class="card-title">{{$group['name']}}</a>
       <p class="card-text">{{$group['description']}}</p>
 <hr>
-<a href="/groups/addmember/{{$group['id']}}" class="card-link btn-secondary ">Tambah Anggota Teman</a>
+<a href="/groups/addmember/{{$group['id']}}" class="card-link btn-outline-secondary ">Tambah Anggota Teman</a>
 <ul class="list-group">
 @foreach ($group->friends as $friend )
 
@@ -38,11 +38,11 @@
   <br>
   Anggota Keluar : {{$jumlah_keluar}} anggota</p>
 <hr>
-      <a href="/groups/{{$group['id']}}/edit" class="card-link btn-warning">Edit Group</a>
+      <a href="/groups/{{$group['id']}}/edit" class="card-link btn-outline-warning">Edit Group</a>
       <form action="/groups/{{$group['id']}}" method="POST">
         @csrf
         @method('DELETE')
-      <button class="card-link btn-danger">Delete Group</button>
+      <button class="card-link btn-outline-danger">Delete Group</button>
     </form>
     </div>
   </div>

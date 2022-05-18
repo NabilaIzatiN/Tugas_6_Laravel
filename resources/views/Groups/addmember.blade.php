@@ -12,7 +12,7 @@
         <option selected>Pilih Teman Untuk Dimasukkan ke Groups</option>
         @foreach ($friend as $f)
         @php
-        $cek = Member_groups::where('friends_id', $f->id)
+        $cek = Members::where('friends_id', $f->id)
         ->where('groups_id', $group->id)
         ->where('status', 1)
         ->first();
