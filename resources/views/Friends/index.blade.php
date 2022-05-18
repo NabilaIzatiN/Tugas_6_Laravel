@@ -3,7 +3,7 @@
 @section('title','Friends')
 
 @section('content')
-
+<a href="/friends/create" class="card-link btn-primary">Tambah Teman</a>
 @foreach ($friends as $friend)
 <div class="card" style="width: 18rem;">
     <div class="card-body">

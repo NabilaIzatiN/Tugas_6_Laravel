@@ -9,4 +9,9 @@ class Friends extends Model
 {
     use HasFactory;
     protected $guarded =['mana'];
+
+    public function groups()
+    {
+        return $this->belongsTo(Groups::class);
+    }
 }
